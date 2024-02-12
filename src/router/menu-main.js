@@ -12,14 +12,6 @@ export default [{
     {
         label: 'Templates',
         children: [{
-                label: 'Default',
-                route: '/default',
-            },
-            {
-                label: 'Home',
-                route: '/home',
-            },
-            {
                 label: 'Article',
                 route: '/article',
             },
