@@ -202,7 +202,7 @@ export default [{
         ]
     },
     {
-        label: 'External Page',
+        label: 'What is Vue.js?',
         route: 'https://vuejs.org',
         external: true
     },
