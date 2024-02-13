@@ -60,6 +60,7 @@
 	<ul
 		v-bind="attributes"
 		:class="{
+			shadow: !mini && child,
 			'float-top': float === 'top' && !(child || !mini || (mini && !small)),
 			'float-right': float === 'right' && !(child || !mini || (mini && !small)),
 			'float-bottom': float === 'bottom' && !(child || !mini || (mini && !small)),
