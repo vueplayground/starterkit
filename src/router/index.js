@@ -16,6 +16,10 @@ const routes = [{
         component: () => import('@/views/Videos.vue')
     },
     {
+        path: '/videos/:id',
+        component: () => import('@/views/Video.vue')
+    },
+    {
         path: '/articles/:id',
         component: () => import('@/views/Article.vue'),
         props: true
