@@ -1,7 +1,7 @@
-import MainMenu from './menu-main.js'
+import HeaderMenu from './menu-header.js'
 import FooterMenu from './menu-footer.js'
 
 export default {
-    MainMenu,
+    HeaderMenu,
     FooterMenu
 }

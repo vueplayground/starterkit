@@ -16,8 +16,8 @@ export default [{
                 route: '/article',
             },
             {
-                label: 'Articles',
-                route: '/articles',
+                label: 'Videos',
+                route: '/videos',
             },
             {
                 label: 'Categories',

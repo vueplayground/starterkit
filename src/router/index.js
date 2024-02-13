@@ -12,8 +12,8 @@ const routes = [{
         component: () => import('@/views/AboutView.vue')
     },
     {
-        path: '/articles',
-        component: () => import('@/views/ArticlesView.vue')
+        path: '/videos',
+        component: () => import('@/views/Videos.vue')
     },
     {
         path: '/articles/:id',

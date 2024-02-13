@@ -67,7 +67,7 @@
 					/></div>
 				<div class="items-end flex-col justify-end inline-flex w-full md:grow">
 					<Navbar
-						:menu="menus.MainMenu"
+						:menu="menus.HeaderMenu"
 						topBorderHeight="1px"
 						align="center-right"
 						paddingX="10px"
