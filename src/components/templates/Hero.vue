@@ -6,7 +6,11 @@
 					<div class="flex-row w-1/2 h-full flex"><input
 							style="height:25px;margin-top:7px;margin-left:15px"
 							class="w-32 px-2 rounded md:min-w-fit bg-sky-50"
-						/><button class="hover:bg-blue-900 ml-2 px-2 h-full"><svg
+							v-model="term"
+						/><button
+							class="hover:bg-blue-900 ml-2 px-2 h-full"
+							@click="$router.push('/search/' + term)"
+						><svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
 								fill="currentColor"
@@ -145,7 +149,9 @@
 			HeaderSection,
 			Navbar
 		},
-		data: () => ({})
+		data: () => ({
+			term: ''
+		})
 	};
 
 </script>

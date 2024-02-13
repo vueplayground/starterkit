@@ -47,11 +47,11 @@ const routes = [{
     },
     {
         path: '/terms',
-        component: () => import('@/views/TermsOfService.vue')
+        component: () => import('@/views/Terms.vue')
     },
     {
         path: '/privacy',
-        component: () => import('@/views/PrivacyPolicy.vue')
+        component: () => import('@/views/Privacy.vue')
     },
     {
         path: '/:catchAll(.*)',
