@@ -21,7 +21,7 @@
 					</p>
 					<p class="mt-4">
 						Sed ut nulla nec odio bibendum dapibus. Cras ultricies elit id ex vestibulum, sit amet gravida magna consequat. Sed interdum velit in varius tempor.
-					</p><button class="hover:bg-pink-700 py-1.5 px-4 rounded-md bg-pink-600 text-white mt-">
+					</p><button class="hover:bg-pink-700 py-1.5 px-4 rounded-md bg-pink-600 text-white mt-6">
 						Add to Cart
 					</button>
 				</div>
