@@ -20,10 +20,6 @@ export default [{
                 route: '/articles',
             },
             {
-                label: 'Search',
-                route: '/search',
-            },
-            {
                 label: 'Categories',
                 route: '/categories',
             },
@@ -36,18 +32,6 @@ export default [{
                 route: '/products',
             },
             {
-                label: 'Register',
-                route: '/register',
-            },
-            {
-                label: 'Login',
-                route: '/login',
-            },
-            {
-                label: 'Profile',
-                route: '/profile',
-            },
-            {
                 label: '404',
                 route: '/404',
             }
@@ -58,14 +42,6 @@ export default [{
         children: [{
                 label: 'Atoms',
                 children: [{
-                        label: 'Badge',
-                        route: '/badge',
-                    },
-                    {
-                        label: 'Button',
-                        route: '/button',
-                    },
-                    {
                         label: 'Checkbox',
                         route: '/checkbox',
                     },
@@ -74,28 +50,8 @@ export default [{
                         route: '/divider',
                     },
                     {
-                        label: 'Icon',
-                        route: '/icon',
-                    },
-                    {
-                        label: 'Image',
-                        route: '/image',
-                    },
-                    {
                         label: 'Input Field',
                         route: '/input-field',
-                    },
-                    {
-                        label: 'Radio Button',
-                        route: '/radio-button',
-                    },
-                    {
-                        label: 'Link',
-                        route: '/link',
-                    },
-                    {
-                        label: 'Text',
-                        route: '/text',
                     }
                 ]
             },
