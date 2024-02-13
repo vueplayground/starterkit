@@ -1,6 +1,6 @@
 <template>
 	<div class="h-screen flex-col flex">
-		<HeaderSection class="flex-col md:h-24 flex flex-shrink-0">
+		<HeaderSection class="flex-col md:h-28 flex flex-shrink-0">
 			<div class="flex bg-blue-950 h-10 w-full flex-shrink-0">
 				<PageContainer class="h-full">
 					<div class="flex-row w-1/2 h-full flex"><input
