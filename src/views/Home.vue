@@ -1,7 +1,7 @@
 <template>
 	<Hero
 		class="shadow-2xl"
-		title="Vue Play -  Starter Kitw"
+		title="Vue Play -  Starter Kit"
 	>
 		<PageContainer>
 			<div class="w-full md:flex-row flex-col my-16 py-4 flex">
