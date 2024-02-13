@@ -2,7 +2,7 @@
 	<Default>
 		<PageContainer class="flex-col">
 
-			<div class="flex-col max-w-md place-self-center mt-8 mb-24 w-full flex md:max-w-4xl">
+			<div class="flex-col max-w-md place-self-center mt-8 mb-24 w-full flex md:max-w-2xl">
 				<h1 class="px-4 mb-12 mt-6 font-medium text-3xl w-full">
 					Blog
 				</h1>
