@@ -132,6 +132,7 @@
 				{{ item.label }}
 			</router-link> <a
 				v-else-if="item.route"
+				target="_blank"
 				:href="item.route"
 				:class="{
 					'text-right': ['center-right', 'right', 'right-strong'].includes(align) && (!mini || align === 'right-strong')
