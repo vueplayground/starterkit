@@ -1,7 +1,10 @@
 <template>
 	<Default>
-		<PageContainer>
-			<div class="mt-16 mb-48 w-full grid">
+		<PageContainer class="flex-col">
+			<h1 class="mb-2 mt-12 font-medium text-3xl">
+				Movies
+			</h1>
+			<div class="mt-8 mb-24 w-full grid">
 				<div
 					class="mb-5 flex-row flex"
 					v-for="i in 10"
