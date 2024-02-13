@@ -74,6 +74,11 @@
 		}),
 		created() {
 			this.searchTerm = this.term;
+		},
+		watch: {
+			term() {
+				this.searchTerm = this.term;
+			}
 		}
 	};
 
