@@ -1,5 +1,5 @@
 <template>
-	<Hero>
+	<Hero class="shadow-2xl">
 		<PageContainer>
 			<div class="w-full md:flex-row flex-col my-16 py-4 flex">
 				<div class="px-6 justify-center flex-col flex w-full md:w-2/3">
@@ -21,7 +21,7 @@
 		<div class="py-16 bg-slate-100 mt-6">
 			<PageContainer>
 				<div class="grid-cols-1 w-full gap-12 sm:grid-cols-3 grid p-6">
-					<div class="duration-300 transition-colors hover:bg-slate-300 cursor-pointer items-center flex-col py-8 rounded-lg flex bg-slate-200">
+					<div class="drop-shadow duration-300 transition-colors hover:bg-slate-300 cursor-pointer items-center flex-col py-8 rounded-lg flex bg-slate-200">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -33,7 +33,7 @@
 							Full Control
 						</span>
 					</div>
-					<div class="duration-300 transition-colors hover:bg-slate-300 cursor-pointer items-center flex-col py-8 rounded-lg flex bg-slate-200">
+					<div class="drop-shadow duration-300 transition-colors hover:bg-slate-300 cursor-pointer items-center flex-col py-8 rounded-lg flex bg-slate-200">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
@@ -49,7 +49,7 @@
 							Less Code
 						</span>
 					</div>
-					<div class="duration-300 transition-colors hover:bg-slate-300 cursor-pointer items-center flex-col py-8 rounded-lg flex bg-slate-200">
+					<div class="drop-shadow duration-300 transition-colors hover:bg-slate-300 cursor-pointer items-center flex-col py-8 rounded-lg flex bg-slate-200">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 24 24"
