@@ -25,6 +25,15 @@ const routes = [{
         props: true
     },
     {
+        path: '/product',
+        component: () => import('@/views/ProductDetail.vue')
+    },
+    {
+        path: '/products/:id',
+        component: () => import('@/views/Products.vue'),
+        props: true
+    },
+    {
         path: '/contact',
         component: () => import('@/views/Contact.vue')
     },
