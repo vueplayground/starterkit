@@ -1,6 +1,6 @@
 <template>
 	<div>
-		Article view
+		Product Details view
 	</div>
 </template>
 <script>

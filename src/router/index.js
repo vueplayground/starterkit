@@ -8,21 +8,12 @@ const routes = [{
         component: () => import('@/views/Home.vue')
     },
     {
-        path: '/about',
-        component: () => import('@/views/About.vue')
-    },
-    {
         path: '/videos',
         component: () => import('@/views/Videos.vue')
     },
     {
         path: '/videos/:id',
         component: () => import('@/views/Video.vue')
-    },
-    {
-        path: '/articles/:id',
-        component: () => import('@/views/Article.vue'),
-        props: true
     },
     {
         path: '/blog',
@@ -42,9 +33,8 @@ const routes = [{
         component: () => import('@/views/UserProfile.vue')
     },
     {
-        path: '/auth/:action?',
-        component: () => import('@/views/Login.vue'),
-        props: true
+        path: '/login',
+        component: () => import('@/views/Login.vue')
     },
     {
         path: '/search/:term?',
@@ -56,16 +46,16 @@ const routes = [{
         component: () => import('@/views/Categories.vue')
     },
     {
-        path: '/terms-of-service',
+        path: '/terms',
         component: () => import('@/views/TermsOfService.vue')
     },
     {
-        path: '/privacy-policy',
+        path: '/privacy',
         component: () => import('@/views/PrivacyPolicy.vue')
     },
     {
         path: '/:catchAll(.*)',
-        component: () => import('@/views/404.vue'),
+        component: () => import('@/views/NotFound.vue'),
         props: true
     }
 ]

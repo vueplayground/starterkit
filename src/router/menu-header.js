@@ -12,8 +12,8 @@ export default [{
     {
         label: 'Templates',
         children: [{
-                label: 'Article',
-                route: '/article',
+                label: 'Blog',
+                route: '/blog',
             },
             {
                 label: 'Videos',
@@ -22,10 +22,6 @@ export default [{
             {
                 label: 'Categories',
                 route: '/categories',
-            },
-            {
-                label: 'Product',
-                route: '/product',
             },
             {
                 label: 'Products',
