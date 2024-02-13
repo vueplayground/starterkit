@@ -26,11 +26,11 @@ const routes = [{
     },
     {
         path: '/product',
-        component: () => import('@/views/ProductDetail.vue')
+        component: () => import('@/views/Products.vue')
     },
     {
         path: '/products/:id',
-        component: () => import('@/views/Products.vue'),
+        component: () => import('@/views/ProductDetail.vue'),
         props: true
     },
     {
