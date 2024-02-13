@@ -4,11 +4,10 @@
 
 			<div class="flex-col max-w-md place-self-center mt-8 mb-24 w-full flex md:max-w-2xl">
 				<input
-					v-model="searchTerm"
-					class="mx-2 mb-10 px-4 border font-extralight text-2xl shadow-md rounded-lg py-4"
+					class="rounded-xl mb-12 mx-2 font-extralight text-2xl px-4 shadow-lg border py-4"
 					placeholder="Search ..."
-				>
-				</input>
+					v-model="searchTerm"
+				/>
 				<div
 					class="relative mb-16 flex-col md:flex-row flex w-full px-4"
 					v-for="i in 10"
