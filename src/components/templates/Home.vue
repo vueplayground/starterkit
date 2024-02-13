@@ -4,25 +4,20 @@
 			<div class="flex bg-blue-950 h-10 w-full flex-shrink-0">
 				<PageContainer class="h-full">
 					<div class="flex-row w-1/2 h-full flex"><input
-							style="height:25px;margin-top:7px;margin-left:10px"
-							class="min-w-fit w-4 rounded-md bg-sky-50"
-						/><button
-							class="bg-slate-950 rounded-md px-2"
-							style="height:26px;margin-top:6px;margin-left:5px"
-						><svg
+							style="height:25px;margin-top:7px;margin-left:15px"
+							class="rounded min-w-fit w-4 bg-sky-50"
+						/><button class="hover:bg-indigo-900 ml-2 px-2 h-full"><svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
 								fill="currentColor"
-								class="text-slate-200 w-6 h-6"
+								class="text-slate-50 w-6 h-6"
 							>
-								<path d="M8.25 10.875a2.625 2.625 0 115.25 0 2.625 2.625 0 01-5.25 0z" />
 								<path
 									fill-rule="evenodd"
-									d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-1.125 4.5a4.125 4.125 0 102.338 7.524l2.007 2.006a.75.75 0 101.06-1.06l-2.006-2.007a4.125 4.125 0 00-3.399-6.463z"
+									d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
 									clip-rule="evenodd"
 								/>
-							</svg>
-						</button>
+							</svg> </button>
 					</div>
 					<div class="flex-row-reverse w-1/2 h-full flex">
 						<button class="hover:bg-indigo-900 px-2 h-full"><svg
