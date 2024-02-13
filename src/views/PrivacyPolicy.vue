@@ -1,6 +1,6 @@
 <template>
 	<div>
-		Article template
+		Privacy Policy
 	</div>
 </template>
 <script>

@@ -5,11 +5,11 @@ import {
 
 const routes = [{
         path: '/',
-        component: () => import('@/views/HomeView.vue')
+        component: () => import('@/views/Home.vue')
     },
     {
         path: '/about',
-        component: () => import('@/views/AboutView.vue')
+        component: () => import('@/views/About.vue')
     },
     {
         path: '/videos',
@@ -17,51 +17,51 @@ const routes = [{
     },
     {
         path: '/articles/:id',
-        component: () => import('@/views/ArticleView.vue'),
+        component: () => import('@/views/Article.vue'),
         props: true
     },
     {
         path: '/blog',
-        component: () => import('@/views/BlogListView.vue')
+        component: () => import('@/views/Blog.vue')
     },
     {
         path: '/blog/:id',
-        component: () => import('@/views/BlogPostView.vue'),
+        component: () => import('@/views/BlogPost.vue'),
         props: true
     },
     {
         path: '/contact',
-        component: () => import('@/views/ContactView.vue')
+        component: () => import('@/views/Contact.vue')
     },
     {
         path: '/profile',
-        component: () => import('@/views/UserProfileView.vue')
+        component: () => import('@/views/UserProfile.vue')
     },
     {
         path: '/auth/:action?',
-        component: () => import('@/views/AuthenticationViews.vue'),
+        component: () => import('@/views/Login.vue'),
         props: true
     },
     {
         path: '/search/:term?',
-        component: () => import('@/views/SearchResultsView.vue'),
+        component: () => import('@/views/SearchResults.vue'),
         props: true
     },
     {
         path: '/categories',
-        component: () => import('@/views/CategoryListView.vue')
+        component: () => import('@/views/Categories.vue')
     },
     {
         path: '/terms-of-service',
-        component: () => import('@/views/TermsOfServiceView.vue')
+        component: () => import('@/views/TermsOfService.vue')
     },
     {
         path: '/privacy-policy',
-        component: () => import('@/views/PrivacyPolicyView.vue')
+        component: () => import('@/views/PrivacyPolicy.vue')
     },
     {
         path: '/:catchAll(.*)',
-        component: () => import('@/views/404ErrorView.vue'),
+        component: () => import('@/views/404.vue'),
         props: true
     }
 ]

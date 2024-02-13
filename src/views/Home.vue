@@ -1,5 +1,5 @@
 <template>
-	<Home>
+	<Hero>
 		<PageContainer>
 			<div class="w-full md:flex-row flex-col my-16 py-4 flex">
 				<div class="px-6 justify-center flex-col flex w-full md:w-2/3">
@@ -69,15 +69,15 @@
 				</div>
 			</PageContainer>
 		</div>
-	</Home>
+	</Hero>
 </template>
 <script>
 	import PageContainer from '@/components/organisms/PageContainer.vue';
-	import Home from '@/components/templates/Home.vue';
+	import Hero from '@/components/templates/Hero.vue';
 	export default {
 		components: {
 			PageContainer: PageContainer,
-			Home: Home
+			Hero: Hero
 		},
 		data: () => ({})
 	};
