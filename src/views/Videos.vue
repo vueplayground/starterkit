@@ -1,10 +1,13 @@
 <template>
 	<Default>
 		<PageContainer class="flex-col">
-			<h1 class="place-self-center lg:place-self-left w-80 md:w-full md:px-4 mb-2 mt-12 font-medium text-3xl flex">
+			<h1
+				class="place-self-center lg:place-self-left w-80 max-w-full md:w-full px-4 mb-2 mt-12 font-medium text-3xl flex"
+				style="height:36px"
+			>
 				Videos
 			</h1>
-			<div class="justify-center md:justify-l mt-8 mb-24 w-full grid">
+			<div class="justify-center md:justify-start mt-8 mb-24 w-full grid">
 				<div
 					class="mb-8 flex-col md:flex-row flex"
 					v-for="i in 10"
