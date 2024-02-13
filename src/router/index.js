@@ -59,7 +59,7 @@ const routes = [{
         component: () => import('@/views/Terms.vue')
     },
     {
-        path: '/privacy',
+        path: '/policy',
         component: () => import('@/views/Privacy.vue')
     },
     {
