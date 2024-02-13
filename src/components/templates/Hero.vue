@@ -98,7 +98,7 @@
 		</HeaderSection>
 		<HeroSection>
 			<h1 class="font-thin text-3xl xl:pl-6">
-				Vue Play
+				{{title}}
 			</h1>
 		</HeroSection>
 		<div class="flex-grow flex-col">
@@ -148,6 +148,12 @@
 			FooterSection,
 			HeaderSection,
 			Navbar
+		},
+		props: {
+			title: {
+				type: String,
+				default: 'Vue Play'
+			}
 		},
 		data: () => ({
 			term: ''
