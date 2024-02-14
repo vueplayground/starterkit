@@ -4,18 +4,24 @@
 			<div class="mb-32 flex mt-8 flex-col lg:flex-row mx-6">
 				<div class="lg:mr-6 grow">
 					<h2 class="overflow-hidden w-full text-ellipsis whitespace-nowrap text-2xl font-medium mb-6">
-						Product Detail
+						Product Details
 					</h2>
 					<div class="from-fuchsia-950 bg-gradient-to-tl bg-slate-800 rounded-md aspect-video">
 					</div>
 				</div>
-				<div class="w-96">
-					<h2 class="text-2xl font-medium mt-6 lg:mt-0">
-						Price
-					</h2>
-					<h3 class="font-extralight text-xl">
-						400 USD
-					</h3>
+				<div class="lg:w-96">
+					<div class="flex mt-6 lg:mt-0 pb-2 w-56 lg:w-full max-w-full">
+						<div class="w-1/2">
+							<h2 class="text-2xl font-medium">
+								Price
+							</h2>
+						</div>
+						<div class="text-right w-1/2 mt-1">
+							<h3 class="font-extralight text-xl">
+								400 USD
+							</h3>
+						</div>
+					</div>
 					<p class="mt-4">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ac leo vel quam facilisis ullamcorper. Donec auctor sapien ac sapien commodo, id fringilla nulla vulputate.
 					</p>
