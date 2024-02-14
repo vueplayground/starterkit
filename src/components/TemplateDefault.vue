@@ -160,7 +160,12 @@
 		},
 		data: () => ({
 			term: ''
-		})
+		}),
+		methods: {
+			alert(msg) {
+				alert(msg)
+			}
+		}
 	};
 
 </script>
