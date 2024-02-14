@@ -7,7 +7,7 @@
 					Categories
 				</h1>
 				<div class="mt-6 relative mb-16 flex-col md:flex-row flex w-full px-4">
-					<div class="grid-cols-2 m:grid-cols-3 gap-11 grid w-full">
+					<div class="grid-cols-2 md:grid-cols-3 gap-11 grid w-full">
 						<div class="bg-slate-700 from-slate-800 aspect-video shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr flex cursor-pointer hover:opacity-80">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
