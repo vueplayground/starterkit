@@ -7,6 +7,7 @@
 							style="height:25px;margin-top:7px;margin-left:15px"
 							class="w-32 px-2 rounded md:min-w-fit bg-sky-50"
 							v-model="term"
+							@keypress.enter="$router.push('/search/' + term) "
 						/><button
 							class="hover:bg-blue-900 ml-2 px-2 h-full"
 							@click="$router.push('/search/' + term)"
