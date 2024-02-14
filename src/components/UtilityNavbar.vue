@@ -503,13 +503,6 @@
 			attributes() {
 				const attributes = JSON.parse(JSON.stringify(this.$attrs));
 				delete attributes['vx-slotted']; /* TODO - Fix in editor source code */
-				/* TODO - Fix in editor source code */
-				/* TODO - Fix in editor source code */
-				/* TODO - Fix in editor source code */
-				/* TODO - Fix in editor source code */
-				/* TODO - Fix in editor source code */
-				/* TODO - Fix in editor source code */
-				/* TODO - Fix in editor source code */
 				return attributes;
 			},
 			bottomBorderWidthComputed() {

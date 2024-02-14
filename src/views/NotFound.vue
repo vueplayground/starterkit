@@ -1,9 +1,9 @@
 <template>
-	<Hero
+	<TemplateHero
 		class="shadow-2xl"
 		title="Uh oh ..."
 	>
-		<PageContainer>
+		<WrapperPage>
 			<div class="w-full md:flex-row flex-col my-16 py-4 flex">
 				<div class="px-6 justify-center flex-col flex w-full md:w-2/3">
 					<h1 class="mb-8 font-semibold text-4xl">
@@ -18,16 +18,16 @@
 				<div class="p-6 justify-center lg:justify-end flex w-full md:w-1/3">
 				</div>
 			</div>
-		</PageContainer>
-	</Hero>
+		</WrapperPage>
+	</TemplateHero>
 </template>
 <script>
-	import PageContainer from '@/components/organisms/PageContainer.vue';
-	import Hero from '@/components/templates/Hero.vue';
+	import WrapperPage from '@/components/WrapperPage.vue';
+	import TemplateHero from '@/components/TemplateHero.vue';
 	export default {
 		components: {
-			PageContainer: PageContainer,
-			Hero: Hero
+			WrapperPage,
+			TemplateHero
 		},
 		data: () => ({})
 	};

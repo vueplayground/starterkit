@@ -1,13 +1,13 @@
 <template>
-	<Hero title="Vue Play -  Starter Kit">
-		<PageContainer>
+	<TemplateHero title="Vue Play -  Starter Kit">
+		<WrapperPage>
 			<div class="w-full md:flex-row flex-col my-16 py-4 flex">
 				<div class="px-6 justify-center flex-col flex w-full md:w-2/3">
 					<h1 class="mb-8 font-semibold text-4xl">
 						Next generation front end tooling
 					</h1>
 					<p class="tracking-wide max-w-md font-light text-2xl">
-						Explore the depth of Vue.js visually, uncovering its elegant design patterns, and dynamic capabilities, immersing yourself in a vibrant web development experience.
+						Dummy page to explore the depth of Vue.js visually, uncovering its elegant design patterns, and dynamic capabilities, immersing yourself in a vibrant web development experience.
 					</p>
 				</div>
 				<div class="p-6 justify-center lg:justify-end flex w-full md:w-1/3">
@@ -17,9 +17,9 @@
 					/>
 				</div>
 			</div>
-		</PageContainer>
+		</WrapperPage>
 		<div class="py-16 bg-slate-100 mt-6">
-			<PageContainer>
+			<WrapperPage>
 				<div class="grid-cols-1 w-full gap-12 sm:grid-cols-3 grid p-6">
 					<div class="drop-shadow duration-300 transition-colors hover:bg-slate-300 cursor-pointer items-center flex-col py-8 rounded-lg flex bg-slate-200">
 						<svg
@@ -67,17 +67,17 @@
 						</span>
 					</div>
 				</div>
-			</PageContainer>
+			</WrapperPage>
 		</div>
-	</Hero>
+	</TemplateHero>
 </template>
 <script>
-	import PageContainer from '@/components/organisms/PageContainer.vue';
-	import Hero from '@/components/templates/Hero.vue';
+	import WrapperPage from '@/components/WrapperPage.vue';
+	import TemplateHero from '@/components/TemplateHero.vue';
 	export default {
 		components: {
-			PageContainer: PageContainer,
-			Hero: Hero
+			WrapperPage,
+			TemplateHero
 		},
 		data: () => ({})
 	};

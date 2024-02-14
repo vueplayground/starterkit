@@ -1,7 +1,7 @@
 <template>
-	<Default>
+	<TemplateDefault>
 		<div class="bg-gradient-to-tl bg-cyan-800 h-full grow place-items-center flex from-emerald-500 justify-center uppercase p-8 text-white w-full">
-			<PageContainer class="justify-center">
+			<WrapperPage class="justify-center">
 				<div style="max-width:100%;width:240px">
 					<h2 class="mb-2">
 						Login
@@ -13,17 +13,17 @@
 						placeholder="Password"
 					/><button class="hover:bg-fuchsia-950 mt-4 rounded-lg bg-fuchsia-900 w-full p-3">Button</button>
 				</div>
-			</PageContainer>
+			</WrapperPage>
 		</div>
-	</Default>
+	</TemplateDefault>
 </template>
 <script>
-	import PageContainer from '@/components/organisms/PageContainer.vue';
-	import Default from '@/components/templates/Default.vue';
+	import WrapperPage from '@/components/WrapperPage.vue';
+	import TemplateDefault from '@/components/TemplateDefault.vue';
 	export default {
 		components: {
-			PageContainer: PageContainer,
-			Default: Default
+			WrapperPage,
+			TemplateDefault
 		},
 		data: () => ({})
 	};

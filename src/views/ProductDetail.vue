@@ -1,6 +1,6 @@
 <template>
-	<Default>
-		<PageContainer class="flex-col">
+	<TemplateDefault>
+		<WrapperPage class="flex-col">
 			<div class="mb-32 flex mt-8 flex-col lg:flex-row mx-6">
 				<div class="lg:mr-6 grow">
 					<h2 class="overflow-hidden w-full text-ellipsis whitespace-nowrap text-2xl font-medium mb-6">
@@ -26,16 +26,16 @@
 					</button>
 				</div>
 			</div>
-		</PageContainer>
-	</Default>
+		</WrapperPage>
+	</TemplateDefault>
 </template>
 <script>
-	import PageContainer from '@/components/organisms/PageContainer.vue';
-	import Default from '@/components/templates/Default.vue';
+	import WrapperPage from '@/components/WrapperPage.vue';
+	import TemplateDefault from '@/components/TemplateDefault.vue';
 	export default {
 		components: {
-			PageContainer: PageContainer,
-			Default: Default
+			WrapperPage,
+			TemplateDefault
 		},
 		data: () => ({})
 	};
