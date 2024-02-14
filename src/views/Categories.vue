@@ -2,13 +2,13 @@
 	<TemplateDefault>
 		<WrapperPage class="flex-col">
 
-			<div class="flex-col max-w-md place-self-center mt-8 mb-24 w-full flex md:max-w-2xl">
+			<div class="flex-col max-w-md place-self-center mt-8 mb-24 w-full flex md:max-w-4xl">
 				<h1 class="px-4 mb-4 mt-6 font-medium text-3xl w-full">
 					Categories
 				</h1>
 				<div class="mt-6 relative mb-16 flex-col md:flex-row flex w-full px-4">
-					<div class="gap-11 grid grid-cols-3 w-full">
-						<div class="shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr from-slate-500 bg-slate-400 h-28 flex cursor-pointer hover:opacity-80">
+					<div class="grid-cols-2 m:grid-cols-3 gap-11 grid w-full">
+						<div class="bg-slate-700 from-slate-800 aspect-video shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr flex cursor-pointer hover:opacity-80">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -25,7 +25,7 @@
 								Category 1
 							</h2>
 						</div>
-						<div class="shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr from-slate-500 bg-slate-400 h-28 flex cursor-pointer hover:opacity-80">
+						<div class="bg-slate-700 from-slate-800 aspect-video shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr flex cursor-pointer hover:opacity-80">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -42,7 +42,7 @@
 								Category 2
 							</h2>
 						</div>
-						<div class="shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr from-slate-500 bg-slate-400 h-28 flex cursor-pointer hover:opacity-80">
+						<div class="bg-slate-700 from-slate-800 aspect-video shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr flex cursor-pointer hover:opacity-80">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -59,7 +59,7 @@
 								Category 3
 							</h2>
 						</div>
-						<div class="shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr from-slate-500 bg-slate-400 h-28 flex cursor-pointer hover:opacity-80">
+						<div class="bg-slate-700 from-slate-800 aspect-video shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr flex cursor-pointer hover:opacity-80">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -76,7 +76,7 @@
 								Category 4
 							</h2>
 						</div>
-						<div class="shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr from-slate-500 bg-slate-400 h-28 flex cursor-pointer hover:opacity-80">
+						<div class="bg-slate-700 from-slate-800 aspect-video shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr flex cursor-pointer hover:opacity-80">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -93,7 +93,7 @@
 								Category 5
 							</h2>
 						</div>
-						<div class="shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr from-slate-500 bg-slate-400 h-28 flex cursor-pointer hover:opacity-80">
+						<div class="bg-slate-700 from-slate-800 aspect-video shadow-md rounded-lg items-center justify-center flex-col bg-gradient-to-tr flex cursor-pointer hover:opacity-80">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
