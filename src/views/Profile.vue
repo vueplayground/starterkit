@@ -4,7 +4,7 @@
 			<div class="w-full md:flex-row flex-col my-16 py-4 flex">
 				<div class="px-6 justify-center flex-col flex w-full md:w-1/2">
 					<h1 class="mb-8 font-semibold text-4xl">
-						Login to access your profile
+						Log in to access your profile
 					</h1>
 					<p class="tracking-wide max-w-md font-light text-2xl">
 						Settings not available
