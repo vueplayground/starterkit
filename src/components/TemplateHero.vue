@@ -113,7 +113,7 @@
 			</WrapperPage>
 		</SectionHeader>
 		<SectionHero>
-			<h1 class="font-thin text-3xl xl:pl-6">
+			<h1 class="font-thin text-xl lg:text-3xl xl:pl-6">
 				{{title}}
 			</h1>
 		</SectionHero>
@@ -176,7 +176,7 @@
 		}),
 		methods: {
 			alert(msg) {
-				alert(msg)
+				alert(msg);
 			}
 		}
 	};
