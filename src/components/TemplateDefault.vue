@@ -28,9 +28,8 @@
 							class="hover:bg-blue-900 px-2 h-full"
 							@click="$router.push('/profile')"
 							:class="{
-'bg-blue-900': $route.path === '/profile'
-}"
-							:style=" "
+								'bg-blue-900': $route.path === '/profile'
+							}"
 						><svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
