@@ -7,7 +7,7 @@
 						Login to access your profile
 					</h1>
 					<p class="tracking-wide max-w-md font-light text-2xl">
-						Settings not av
+						Settings not available
 					</p>
 				</div>
 			</div>
