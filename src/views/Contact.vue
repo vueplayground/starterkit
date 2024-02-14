@@ -36,7 +36,7 @@
 						</label><textarea
 							rows=""
 							cols=""
-							class="px-4 rounded-lg shadow w-full h-32"
+							class="p-4 rounded-lg shadow w-full h-32"
 						>
 </textarea>
 					</div><button class="hover:bg-pink-700 py-3 px-4 rounded-md bg-pink-600 text-white">
