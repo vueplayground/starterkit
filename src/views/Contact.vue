@@ -10,7 +10,7 @@
 						This dummy form is non-functional; it serves solely to showcase the design of an attractive contact form using Vue Play.
 					</p>
 				</div>
-				<div class="rounded-lg flex-col mx-4 p-6 flex w-full md:w-1/2 bg-slate-100">
+				<div class="rounded-lg flex-col mx-4 p-6 flex grow md:w-1/2 bg-slate-100 mt-4 md:mt-0">
 					<div class="mb-4">
 						<label
 							for=""
