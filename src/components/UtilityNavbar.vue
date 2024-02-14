@@ -120,7 +120,8 @@
 			</svg> <img
 				v-if="item.icon && align !== 'right-strong'"
 				:src="item.icon"
-				class="object-center object-contain ml-2.5 h-6 w-6"
+				@click="$router.push(item.route)"
+				class="cursor-pointer object-center object-contain ml-2.5 h-6 w-6"
 			/> <router-link
 				v-if="item.route && !item.external"
 				:to="item.route"
@@ -153,7 +154,8 @@
 			<img
 				v-if="item.icon && align === 'right-strong'"
 				:src="item.icon"
-				class="object-center object-contain mr-2.5 h-6 w-6"
+				@click="$router.push(item.route)"
+				class="cursor-pointer object-center object-contain mr-2.5 h-6 w-6"
 			/><svg
 				v-if="align !== 'right-strong'"
 				@click="item.open = !item.open"
