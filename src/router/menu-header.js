@@ -20,16 +20,16 @@ export default [{
                 route: '/videos',
             },
             {
-                label: 'Categories',
-                route: '/categories',
-            },
-            {
                 label: 'Products',
                 route: '/products',
             },
             {
-                label: '404',
-                route: '/404',
+                label: 'Categories',
+                route: '/categories',
+            },
+            {
+                label: '404 Not Found',
+                route: '/hello-world',
             }
         ]
     },
