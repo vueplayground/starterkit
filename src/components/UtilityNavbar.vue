@@ -569,20 +569,23 @@
 					}, {
 						label: 'More',
 						children: [{
-							label: 'More 1'
+							label: 'More 1',
+							route: '/more-1',
 						}, {
 							label: 'More 2',
+							route: '/more-2',
 							children: [{
 								label: 'More',
+								route: '/more',
 								children: [{
-									label: 'More 1',
-									route: '/more-1'
+									label: 'Even more 1',
+									route: '/even-more-1'
 								}, {
-									label: 'More 2',
-									route: '/more-2'
+									label: 'Even more 2',
+									route: '/even-more-2'
 								}, {
-									label: 'More 3',
-									route: '/more-3'
+									label: 'Even more 3',
+									route: '/even-more-3'
 								}]
 							}]
 						}, {
