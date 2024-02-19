@@ -16,8 +16,5 @@ export default defineConfig({
             '@': fileURLToPath(new URL('./src', import.meta.url))
         },
         extensions: ['.vue', '.tsx', '.ts', '.mjs', '.js', '.jsx', '.json', '.wasm']
-    },
-    define: {
-        '{}': {}
     }
 })
