@@ -1,7 +1,9 @@
 <template>
 	<div class="text-slate-50 bg-slate-800 h-40">
 		<slot>
-			Footer
+			<div class="justify-center items-center h-full w-full flex">
+				Add some content to footer
+			</div>
 		</slot>
 	</div>
 </template>

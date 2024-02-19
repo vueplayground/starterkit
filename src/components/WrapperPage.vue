@@ -1,8 +1,8 @@
 <template>
 	<div class="flex m-auto max-w-6xl w-full">
 		<slot>
-			<div class="p-4">
-				Add anything here
+			<div class="items-center justify-center w-full flex p-4">
+				Add anything to the page wrapper
 			</div>
 		</slot>
 	</div>
