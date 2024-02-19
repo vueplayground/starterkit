@@ -60,7 +60,7 @@
 								/>
 							</svg> </button><button
 							class="hover:bg-blue-900 px-2 h-full"
-							@click="alert('Darkmode switch - To be implemented')"
+							@click="alert('Darkmode Switch')"
 						><svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 24 24"
@@ -120,7 +120,7 @@
 		<div class="flex-grow flex-col">
 			<slot>
 				<div class="py-8 px-6">
-					Add Some Content ...
+					Add Some Content To Template...
 				</div>
 			</slot>
 		</div>
@@ -158,18 +158,18 @@
 	import UtilityNavbar from '@/components/UtilityNavbar.vue';
 	export default {
 		inject: ['menus'],
+		props: {
+			title: {
+				type: String,
+				default: 'Vue Play Hero Title'
+			}
+		},
 		components: {
 			SectionHero,
 			WrapperPage,
 			SectionFooter,
 			SectionHeader,
 			UtilityNavbar
-		},
-		props: {
-			title: {
-				type: String,
-				default: 'Vue Play'
-			}
 		},
 		data: () => ({
 			term: ''
