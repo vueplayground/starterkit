@@ -9,6 +9,7 @@
 					:groupBackgroundColor="'#ffffffff'"
 					:color="''"
 					:groupBackgroundColorSubmenu="'#ffffffff'"
+					style="width:320px"
 				>
 				</UtilityNavbar>
 			</div>

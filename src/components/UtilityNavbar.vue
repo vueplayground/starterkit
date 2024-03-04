@@ -222,6 +222,7 @@
 				:paddingX="paddingX"
 				:paddingY="paddingY"
 				:dividerWidth="dividerWidth"
+				:dividerHeight="dividerHeight"
 				:dividerBackgroundColor="dividerBackgroundColor"
 				:topBorderColor="topBorderColor"
 				:topBorderColorActive="topBorderColorActive"
@@ -237,6 +238,20 @@
 				:bottomBorderWidth="bottomBorderWidth"
 				:bottomBorderWidthActive="bottomBorderWidthActive"
 				:bottomBorderWidthHover="bottomBorderWidthHover"
+				:leftBorderColor="leftBorderColor"
+				:leftBorderColorActive="leftBorderColorActive"
+				:leftBorderColorHover="leftBorderColorHover"
+				:leftBorderHeight="leftBorderHeight"
+				:leftBorderWidth="leftBorderWidth"
+				:leftBorderHeightActive="leftBorderHeightActive"
+				:leftBorderHeightHover="leftBorderHeightHover"
+				:rightBorderColor="rightBorderColor"
+				:rightBorderColorActive="rightBorderColorActive"
+				:rightBorderColorHover="rightBorderColorHover"
+				:rightBorderHeight="rightBorderHeight"
+				:rightBorderWidth="rightBorderWidth"
+				:rightBorderHeightActive="rightBorderHeightActive"
+				:rightBorderHeightHover="rightBorderHeightHover"
 				:groupWeight="groupWeight"
 				:groupColor="groupColor"
 				:groupBackgroundColor="groupBackgroundColor"
@@ -245,6 +260,14 @@
 				:groupPaddingTop="groupPaddingTop"
 				:groupPaddingBottom="groupPaddingBottom"
 				class="grow"
+			/>
+			<div
+				v-if="mini"
+				class="left-border"
+			/>
+			<div
+				v-if="mini"
+				class="right-border"
 			/>
 			<div
 				v-if="!child && !mini"
@@ -483,6 +506,84 @@
 				default: '#555',
 				controller: 'COLOR'
 			},
+			leftBorderHeight: {
+				type: String,
+				default: '100%',
+				unit: '%',
+				controller: 'SLIDER'
+			},
+			leftBorderHeightHover: {
+				type: String,
+				default: '100%',
+				unit: '%',
+				controller: 'SLIDER'
+			},
+			leftBorderHeightActive: {
+				type: String,
+				default: '100%',
+				unit: '%',
+				controller: 'SLIDER'
+			},
+			leftBorderWidth: {
+				type: String,
+				default: '3px',
+				unit: '%',
+				controller: 'SLIDER'
+			},
+			leftBorderColor: {
+				type: String,
+				default: 'transparent',
+				controller: 'COLOR'
+			},
+			leftBorderColorHover: {
+				type: String,
+				default: 'transparent',
+				controller: 'COLOR'
+			},
+			leftBorderColorActive: {
+				type: String,
+				default: '#777',
+				controller: 'COLOR'
+			},
+			rightBorderHeight: {
+				type: String,
+				default: '100%',
+				unit: '%',
+				controller: 'SLIDER'
+			},
+			rightBorderHeightActive: {
+				type: String,
+				default: '60%',
+				unit: '%',
+				controller: 'SLIDER'
+			},
+			rightBorderHeightHover: {
+				type: String,
+				default: '100%',
+				unit: '%',
+				controller: 'SLIDER'
+			},
+			rightBorderWidth: {
+				type: String,
+				default: '3px',
+				unit: 'px',
+				controller: 'SLIDER'
+			},
+			rightBorderColor: {
+				type: String,
+				default: 'transparent',
+				controller: 'COLOR'
+			},
+			rightBorderColorHover: {
+				type: String,
+				default: 'transparent',
+				controller: 'COLOR'
+			},
+			rightBorderColorActive: {
+				type: String,
+				default: 'transparent',
+				controller: 'COLOR'
+			},
 			paddingX: {
 				type: String,
 				default: '10px',
@@ -500,6 +601,12 @@
 				default: ''
 			},
 			dividerWidth: {
+				type: String,
+				default: '0px',
+				unit: 'px',
+				controller: 'SLIDER'
+			},
+			dividerHeight: {
 				type: String,
 				default: '0px',
 				unit: 'px',
@@ -566,6 +673,24 @@
 				delete attributes['vx-slotted']; /* TODO - Fix in editor source code */
 				return attributes;
 			},
+			leftBorderHeightComputed() {
+				return 'calc(' + this.leftBorderHeight + ' - (' + this.dividerHeight + ' / 2))';
+			},
+			leftBorderHeightActiveComputed() {
+				return 'calc(' + this.leftBorderHeightActive + ' - (' + this.dividerHeight + ' / 2))';
+			},
+			leftBorderHeightHoverComputed() {
+				return 'calc(' + this.leftBorderHeightHover + ' - (' + this.dividerHeight + ' / 2))';
+			},
+			rightBorderHeightComputed() {
+				return 'calc(' + this.rightBorderHeight + ' - (' + this.dividerHeight + ' / 2))';
+			},
+			rightBorderHeightActiveComputed() {
+				return 'calc(' + this.rightBorderHeightActive + ' - (' + this.dividerHeight + ' / 2))';
+			},
+			rightBorderHeightHoverComputed() {
+				return 'calc(' + this.rightBorderHeightHover + ' - (' + this.dividerHeight + ' / 2))';
+			},
 			bottomBorderWidthComputed() {
 				return 'calc(' + this.bottomBorderWidth + ' - (' + this.dividerWidth + ' / 2))';
 			},
@@ -587,8 +712,14 @@
 			borderLeftComputed() {
 				return 'calc(50% - (' + this.dividerWidth + ' / 2))';
 			},
+			borderTopComputed() {
+				return 'calc(50% - (' + this.dividerHeight + ' / 2))';
+			},
 			dividerWidthMinus() {
 				return '-' + this.dividerWidth;
+			},
+			dividerHeightMinus() {
+				return '-' + this.dividerHeight;
 			}
 		},
 		created() {
@@ -770,6 +901,72 @@
 
 	.root>li:last-child.active>.bottom-border {
 		width: v-bind('bottomBorderWidthActive');
+	}
+
+	.left-border {
+		position: absolute;
+		left: 0;
+		top: v-bind('borderTopComputed');
+		transform: translateY(-50%);
+		height: v-bind('leftBorderHeightComputed');
+		width: v-bind('leftBorderWidth');
+		background-color: v-bind('leftBorderColor');
+	}
+
+	li:last-child>.left-border {
+		top: 50%;
+		height: v-bind('leftBorderHeight');
+	}
+
+	.root>li:hover>.left-border {
+		height: v-bind('leftBorderHeightHoverComputed');
+		background-color: v-bind('leftBorderColorHover');
+	}
+
+	.root>li:hover:last-child>.left-border {
+		height: v-bind('leftBorderHeightHover');
+	}
+
+	.root>li.active>.left-border {
+		height: v-bind('leftBorderHeightActiveComputed');
+		background-color: v-bind('leftBorderColorActive');
+	}
+
+	.root>li:last-child.active>.left-border {
+		height: v-bind('leftBorderHeightActive');
+	}
+
+	.right-border {
+		position: absolute;
+		right: 0;
+		top: v-bind('borderTopComputed');
+		transform: translateY(-50%);
+		height: v-bind('rightBorderHeightComputed');
+		width: v-bind('rightBorderWidth');
+		background-color: v-bind('rightBorderColor');
+	}
+
+	li:last-child>.right-border {
+		top: 50%;
+		height: v-bind('rightBorderHeight');
+	}
+
+	.root>li:hover>.right-border {
+		height: v-bind('rightBorderHeightHoverComputed');
+		background-color: v-bind('rightBorderColorHover');
+	}
+
+	.root>li:hover:last-child>.right-border {
+		height: v-bind('rightBorderHeightHover');
+	}
+
+	.root>li.active>.right-border {
+		height: v-bind('rightBorderHeightActiveComputed');
+		background-color: v-bind('rightBorderColorActive');
+	}
+
+	.root>li:last-child.active>.right-border {
+		height: v-bind('rightBorderHeightActive');
 	}
 
 	.root:not(.mini)>li:not(:last-child)::after {
