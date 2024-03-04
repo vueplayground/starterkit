@@ -1,13 +1,15 @@
 <template>
 	<teleport
 		to="body"
-		v-if="open && mini && !child"
+		v-if="open && mini && !child && !sidebar"
 	>
 		<div
 			class="outside"
 			@click="open = !open"
 		/>
-	</teleport> <button
+	</teleport>
+	<button
+		v-if="!sidebar"
 		v-bind="attributes"
 		@click="open = !open"
 		class="flex items-center justify-center"
@@ -66,7 +68,7 @@
 			'float-bottom': float === 'bottom' && !(child || !mini || (mini && !small)),
 			'float-left': float === 'left' && !(child || !mini || (mini && !small)),
 			mini,
-			open: open || (side && !small),
+			open: open || (side && !small) || (sidebar && !child),
 			root: !child,
 			flex: !mini,
 			'align-right': ['right', 'center-right', 'right-strong'].includes(align),
@@ -81,7 +83,8 @@
 				'justify-center': ['center-right', 'center'].includes(align),
 				'justify-end': ['right', 'right-strong'].includes(align),
 				'open': item.open,
-				'active': item.route === $route.path
+				'active': item.route === $route.path,
+				'group-header': !item.route && !item.children
 			}"
 			:divider="divider"
 		>
@@ -108,7 +111,7 @@
 				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
 				fill="currentColor"
-				class="ml-2 w-4 h-4 sub right"
+				class="cursor-pointer ml-2 w-4 h-4 sub right"
 				@click="item.open = !item.open"
 				v-if="['right', 'right-strong', 'center-right'].includes(align)"
 			>
@@ -120,8 +123,11 @@
 			</svg> <img
 				v-if="item.icon && align !== 'right-strong'"
 				:src="item.icon"
-				@click="$router.push(item.route)"
-				class="cursor-pointer object-center object-contain ml-2.5 h-6 w-6"
+				@click="item.route ? $router.push(item.route) : ''"
+				class="object-center object-contain ml-2.5 h-6 w-6"
+				:class="{
+					'cursor-pointer': item.route
+				}"
 			/> <router-link
 				v-if="item.route && !item.external"
 				:to="item.route"
@@ -145,17 +151,21 @@
 				@click="item.open = !item.open"
 				v-else=""
 				:class="{
-					'text-right': ['center-right', 'right', 'right-strong'].includes(align) && (!mini || align === 'right-strong')
+					'text-right': ['center-right', 'right', 'right-strong'].includes(align) && (!mini || align === 'right-strong'),
+					'cursor-pointer': item.children?.length
 				}"
-				class="cursor-pointer grow whitespace-nowrap"
+				class="grow whitespace-nowrap"
 			>
 				{{ item.label }}
 			</span>
 			<img
 				v-if="item.icon && align === 'right-strong'"
 				:src="item.icon"
-				@click="$router.push(item.route)"
-				class="cursor-pointer object-center object-contain mr-2.5 h-6 w-6"
+				@click="item.route ? $router.push(item.route) : ''"
+				class="object-center object-contain mr-2.5 h-6 w-6"
+				:class="{
+					'cursor-pointer': item.route
+				}"
 			/><svg
 				v-if="align !== 'right-strong'"
 				@click="item.open = !item.open"
@@ -164,7 +174,7 @@
 				fill="currentColor"
 				class="cursor-pointer mr-2 w-4 h-4 top"
 				:class="{
-					flat:  !item.open
+					flat: !item.open
 				}"
 			>
 				<path
@@ -227,6 +237,13 @@
 				:bottomBorderWidth="bottomBorderWidth"
 				:bottomBorderWidthActive="bottomBorderWidthActive"
 				:bottomBorderWidthHover="bottomBorderWidthHover"
+				:groupWeight="groupWeight"
+				:groupColor="groupColor"
+				:groupBackgroundColor="groupBackgroundColor"
+				:groupBackgroundColorSubmenu="groupBackgroundColorSubmenu"
+				:groupSize="groupSize"
+				:groupPaddingTop="groupPaddingTop"
+				:groupPaddingBottom="groupPaddingBottom"
 				class="grow"
 			/>
 			<div
@@ -271,6 +288,44 @@
 					value: 'right-strong'
 				}]
 			},
+			groupWeight: {
+				type: Number,
+				default: 500,
+				controller: 'SLIDER'
+			},
+			groupColor: {
+				type: String,
+				default: '#333',
+				controller: 'COLOR'
+			},
+			groupBackgroundColor: {
+				type: String,
+				default: '#E2E8F0',
+				controller: 'COLOR'
+			},
+			groupBackgroundColorSubmenu: {
+				type: String,
+				default: '#CBD5E1',
+				controller: 'COLOR'
+			},
+			groupSize: {
+				type: String,
+				default: '',
+				unit: 'px',
+				controller: 'SLIDER'
+			},
+			groupPaddingTop: {
+				type: String,
+				default: '10px',
+				unit: 'px',
+				controller: 'SLIDER'
+			},
+			groupPaddingBottom: {
+				type: String,
+				default: '10px',
+				unit: 'px',
+				controller: 'SLIDER'
+			},
 			fontWeight: {
 				type: Number,
 				default: 300,
@@ -298,7 +353,7 @@
 			},
 			backgroundColorHover: {
 				type: String,
-				default: '#CBD5E1',
+				default: '#C0D0E0',
 				controller: 'COLOR'
 			},
 			backgroundColorActive: {
@@ -463,6 +518,10 @@
 				type: Boolean,
 				default: false
 			},
+			sidebar: {
+				type: Boolean,
+				default: false
+			},
 			float: {
 				type: String,
 				default: '',
@@ -554,8 +613,8 @@
 		},
 		methods: {
 			isMini() {
-				this.mini = this.minimize || this.side || window.innerWidth < this.breakpoint;
-				this.small = this.minimize || window.innerWidth < this.breakpoint;
+				this.mini = this.minimize || this.sidebar || this.side || window.innerWidth < this.breakpoint;
+				this.small = this.minimize || this.sidebar || window.innerWidth < this.breakpoint;
 			},
 			setItems() {
 				let menu = this.menu ? JSON.parse(JSON.stringify(this.menu)) : null
@@ -764,6 +823,15 @@
 		font-weight: v-bind('fontWeightHover');
 	}
 
+	ul.mini li:hover:has(li:hover) {
+		color: v-bind('color');
+		background-color: v-bind('backgroundColor');
+	}
+
+	ul.mini li ul li:hover:has(li:hover) {
+		background-color: v-bind('backgroundColorSubmenu');
+	}
+
 	button.active,
 	li.active {
 		color: v-bind('colorActive');
@@ -866,11 +934,6 @@
 		display: flex !important;
 	}
 
-	.mini li:hover:has(li:hover) {
-		color: v-bind('color');
-		background-color: v-bind('backgroundColor');
-	}
-
 	.root.float-right {
 		position: fixed;
 		top: 0px;
@@ -909,6 +972,24 @@
 		bottom: v-bind('buttonHeight');
 		width: auto;
 		overflow: auto;
+	}
+
+	li.group-header {
+		font-size: v-bind('groupSize');
+		font-weight: v-bind('groupWeight');
+		color: v-bind('groupColor');
+		background-color: v-bind('groupBackgroundColor');
+		padding-top: v-bind('groupPaddingTop');
+		padding-bottom: v-bind('groupPaddingBottom');
+	}
+
+	li.group-header:hover {
+		background-color: v-bind('groupBackgroundColor');
+	}
+
+	ul li ul li.group-header,
+	ul li ul li.group-header:hover {
+		background-color: v-bind('groupBackgroundColorSubmenu');
 	}
 
 </style>
