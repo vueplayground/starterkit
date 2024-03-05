@@ -98,6 +98,9 @@
 				viewBox="0 0 24 24"
 				fill="currentColor"
 				class="cursor-pointer ml-2 w-4 h-4 top strong"
+				:style="{
+					'padding-left': '10px'
+				}"
 				:class="{
 					flat:  !item.open
 				}"
