@@ -129,7 +129,7 @@
 					'cursor-pointer': item.route
 				}"
 				:style="{
-					'margin-left': mini && indent && !['right', 'right-strong'].includes(align) ? 'calc(5px + 5px)' : ''
+					'margin-left': mini && indent && level && !['right', 'right-strong'].includes(align) ? 'calc(5px + ' + indent + ')' : ''
 				}"
 			/> <router-link
 				v-if="item.route && !item.external"
