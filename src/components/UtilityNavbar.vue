@@ -201,6 +201,8 @@
 			</svg>
 			<Navbar
 				v-if="item.children?.length"
+				:level="level++"
+				:indent="indent"
 				:menu="item.children"
 				:child="true"
 				:align="align"
@@ -310,6 +312,17 @@
 					label: 'Right Strong',
 					value: 'right-strong'
 				}]
+			},
+			level: {
+				type: Number,
+				default: 0,
+				hidden: true
+			},
+			indent: {
+				type: String,
+				default: '10px',
+				unit: 'px',
+				controller: 'SLIDER'
 			},
 			groupWeight: {
 				type: Number,
