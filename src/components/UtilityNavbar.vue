@@ -122,44 +122,57 @@
 				/>
 			</svg> <img
 				v-if="item.icon && align !== 'right-strong'"
-				:src="item.icon"
 				@click="item.route ? $router.push(item.route) : ''"
+				:src="item.icon"
 				class="object-center object-contain ml-2.5 h-6 w-6"
 				:class="{
 					'cursor-pointer': item.route
 				}"
 				:style="{
-					'margin-left': mini && indent && level && !['right', 'right-strong'].includes(align) ? 'calc(5px + ' + indent + ')' : ''
+					'margin-left': mini && indent && level && !['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : '',
+					'margin-right': mini && indent && level && ['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : ''
 				}"
 			/> <router-link
 				v-if="item.route && !item.external"
 				:to="item.route"
+				class="grow whitespace-nowrap"
 				:class="{
 					'text-right': ['center-right', 'right', 'right-strong'].includes(align) && (!mini || align === 'right-strong')
 				}"
-				class="grow whitespace-nowrap"
+				:style="{
+					'margin-left': mini && indent && level && !['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : '',
+					'margin-right': mini && indent && level && ['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : ''
+				}"
 			>
-				{{ item.label }} {{ level }} {{ indent }}
+				{{ item.label }}
 			</router-link> <a
 				v-else-if="item.route"
-				target="_blank"
 				:href="item.route"
+				target="_blank"
+				class="grow whitespace-nowrap"
 				:class="{
 					'text-right': ['center-right', 'right', 'right-strong'].includes(align) && (!mini || align === 'right-strong')
 				}"
-				class="grow whitespace-nowrap"
+				:style="{
+					'margin-left': mini && indent && level && !['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : '',
+					'margin-right': mini && indent && level && ['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : ''
+				}"
 			>
-				{{ item.label }} {{ level }} {{ indent }}
+				{{ item.label }}
 			</a> <span
 				@click="item.open = !item.open"
 				v-else=""
+				class="grow whitespace-nowrap"
 				:class="{
 					'text-right': ['center-right', 'right', 'right-strong'].includes(align) && (!mini || align === 'right-strong'),
 					'cursor-pointer': item.children?.length
 				}"
-				class="grow whitespace-nowrap"
+				:style="{
+					'margin-left': mini && indent && level && !['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : '',
+					'margin-right': mini && indent && level && ['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : ''
+				}"
 			>
-				{{ item.label }} {{ level }} {{ indent }}
+				{{ item.label }}
 			</span>
 			<img
 				v-if="item.icon && align === 'right-strong'"
@@ -168,6 +181,10 @@
 				class="object-center object-contain mr-2.5 h-6 w-6"
 				:class="{
 					'cursor-pointer': item.route
+				}"
+				:style="{
+					'margin-left': mini && indent && level && !['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : '',
+					'margin-right': mini && indent && level && ['right-strong'].includes(align) ? 'calc(' + level + ' * ' + indent + ')' : ''
 				}"
 			/><svg
 				v-if="align !== 'right-strong'"
@@ -323,7 +340,7 @@
 			},
 			indent: {
 				type: String,
-				default: '10px',
+				default: '15px',
 				unit: 'px',
 				controller: 'SLIDER'
 			},
@@ -934,21 +951,21 @@
 		height: v-bind('leftBorderHeight');
 	}
 
-	.root>li:hover>.left-border {
+	ul>li:hover>.left-border {
 		height: v-bind('leftBorderHeightHoverComputed');
 		background-color: v-bind('leftBorderColorHover');
 	}
 
-	.root>li:hover:last-child>.left-border {
+	ul>li:hover:last-child>.left-border {
 		height: v-bind('leftBorderHeightHover');
 	}
 
-	.root>li.active>.left-border {
+	ul>li.active>.left-border {
 		height: v-bind('leftBorderHeightActiveComputed');
 		background-color: v-bind('leftBorderColorActive');
 	}
 
-	.root>li:last-child.active>.left-border {
+	ul>li:last-child.active>.left-border {
 		height: v-bind('leftBorderHeightActive');
 	}
 
@@ -967,21 +984,21 @@
 		height: v-bind('rightBorderHeight');
 	}
 
-	.root>li:hover>.right-border {
+	ul>li:hover>.right-border {
 		height: v-bind('rightBorderHeightHoverComputed');
 		background-color: v-bind('rightBorderColorHover');
 	}
 
-	.root>li:hover:last-child>.right-border {
+	ul>li:hover:last-child>.right-border {
 		height: v-bind('rightBorderHeightHover');
 	}
 
-	.root>li.active>.right-border {
+	ul>li.active>.right-border {
 		height: v-bind('rightBorderHeightActiveComputed');
 		background-color: v-bind('rightBorderColorActive');
 	}
 
-	.root>li:last-child.active>.right-border {
+	ul>li:last-child.active>.right-border {
 		height: v-bind('rightBorderHeightActive');
 	}
 

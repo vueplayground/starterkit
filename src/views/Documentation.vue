@@ -9,12 +9,13 @@
 					:groupBackgroundColor="'#ffffffff'"
 					:color="''"
 					:groupBackgroundColorSubmenu="'#ffffffff'"
-					rightBorderWidth="5px"
 					leftBorderWidth="3px"
 					backgroundColorSubmenu="#ffffffff"
 					backgroundColor="#ffffffff"
-					backgroundColorActive="#faf7f7ff"
+					backgroundColorActive="#ffffffff"
 					backgroundColorHover="#faf7f7ff"
+					indent="20px"
+					leftBorderColorActive="#6d2580ff"
 				>
 				</UtilityNavbar>
 			</div>
