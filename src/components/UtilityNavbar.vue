@@ -139,7 +139,7 @@
 				}"
 				class="grow whitespace-nowrap"
 			>
-				{{ item.label }}
+				{{ item.label }} {{ level }} {{ indent }}
 			</router-link> <a
 				v-else-if="item.route"
 				target="_blank"
@@ -149,7 +149,7 @@
 				}"
 				class="grow whitespace-nowrap"
 			>
-				{{ item.label }}
+				{{ item.label }} {{ level }} {{ indent }}
 			</a> <span
 				@click="item.open = !item.open"
 				v-else=""
@@ -159,7 +159,7 @@
 				}"
 				class="grow whitespace-nowrap"
 			>
-				{{ item.label }}
+				{{ item.label }} {{ level }} {{ indent }}
 			</span>
 			<img
 				v-if="item.icon && align === 'right-strong'"
@@ -204,7 +204,7 @@
 			</svg>
 			<Navbar
 				v-if="item.children?.length"
-				:level="level++"
+				:level="level + 1"
 				:indent="indent"
 				:menu="item.children"
 				:child="true"
