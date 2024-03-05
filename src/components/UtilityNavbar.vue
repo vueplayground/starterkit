@@ -98,9 +98,6 @@
 				viewBox="0 0 24 24"
 				fill="currentColor"
 				class="cursor-pointer ml-2 w-4 h-4 top strong"
-				:style="{
-					'padding-left': '10px'
-				}"
 				:class="{
 					flat:  !item.open
 				}"
@@ -130,6 +127,9 @@
 				class="object-center object-contain ml-2.5 h-6 w-6"
 				:class="{
 					'cursor-pointer': item.route
+				}"
+				:style="{
+					'margin-left': mini && indent && !['right', 'right-strong'].includes(align) ? 'calc(5px + 5px)' : ''
 				}"
 			/> <router-link
 				v-if="item.route && !item.external"
