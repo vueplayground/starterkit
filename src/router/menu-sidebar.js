@@ -13,6 +13,10 @@ export default [{
         icon
     },
     {
+        label: 'Docs',
+        route: '/documentation'
+    },
+    {
         label: 'More',
         children: [{
                 label: 'Group A',

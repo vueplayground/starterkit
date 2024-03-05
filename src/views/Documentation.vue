@@ -16,6 +16,7 @@
 					backgroundColorHover="#faf7f7ff"
 					indent="20px"
 					leftBorderColorActive="#6d2580ff"
+					class="mt-11"
 				>
 				</UtilityNavbar>
 			</div>

@@ -10,6 +10,10 @@ export default [{
         icon
     },
     {
+        label: 'Docs',
+        route: '/documentation'
+    },
+    {
         label: 'Example Pages',
         children: [{
                 label: 'Blog',

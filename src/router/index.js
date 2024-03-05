@@ -38,6 +38,10 @@ const routes = [{
         component: () => import('@/views/Contact.vue')
     },
     {
+        path: '/documentation',
+        component: () => import('@/views/Documentation.vue')
+    },
+    {
         path: '/profile',
         component: () => import('@/views/Profile.vue')
     },
