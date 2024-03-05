@@ -5,7 +5,11 @@ const icon = URL.createObjectURL(new Blob([home], {
 }))
 
 export default [{
-        label: 'Group 1',
+        label: 'Group 1'
+    },
+    {
+        label: 'Home',
+        route: '/',
         icon
     },
     {
@@ -35,7 +39,7 @@ export default [{
         ]
     },
     {
-        label: 'Group 3',
+        label: 'Group 2',
     },
     {
         label: `External URL's`,
